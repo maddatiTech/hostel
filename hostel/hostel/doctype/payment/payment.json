@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:pmt_id-{#######}",
+ "creation": "2022-05-14 13:58:51.441318",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pmt_date",
+  "pmt_branch",
+  "pmt_room",
+  "pmt_std",
+  "column_break_5",
+  "pmt_fee_cat",
+  "pmt_method",
+  "pmt_ref_num",
+  "pmt_rem_balance",
+  "pmt_rem_fine",
+  "pmt_extra_amt",
+  "pmt_amt"
+ ],
+ "fields": [
+  {
+   "fieldname": "pmt_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pmt_std",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Student Name",
+   "options": "Students",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pmt_branch",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Branch Name",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pmt_room",
+   "fieldtype": "Select",
+   "label": "Room Number",
+   "reqd": 1
+  },
+  {
+   "default": "Monthly Fee",
+   "fieldname": "pmt_fee_cat",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fee Category",
+   "options": "Monthly Fee\nAdmission Fee\nSecurity Deposit\nFine\nExtras",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pmt_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Method",
+   "options": "Online\nCash\nCheque",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.pmt_method == 'Cheque'",
+   "fieldname": "pmt_ref_num",
+   "fieldtype": "Data",
+   "label": "reference number"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:((doc.pmt_fee_cat == 'Monthly Fee') || (doc.pmt_fee_cat == 'Admission Fee')|| (doc.pmt_fee_cat == 'Security Deposit')) ",
+   "fieldname": "pmt_rem_balance",
+   "fieldtype": "Currency",
+   "label": "Total Rem Balance",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "pmt_amt",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.pmt_fee_cat == 'Fine'",
+   "fieldname": "pmt_rem_fine",
+   "fieldtype": "Currency",
+   "label": "Total Fine Amt",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.pmt_fee_cat == 'Extras'",
+   "fieldname": "pmt_extra_amt",
+   "fieldtype": "Currency",
+   "label": "Total Extras Amt",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-16 20:25:46.812294",
+ "modified_by": "Administrator",
+ "module": "Hostel",
+ "name": "Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

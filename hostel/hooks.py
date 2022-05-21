@@ -106,23 +106,28 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"hostel.tasks.all"
-# 	],
-# 	"daily": [
-# 		"hostel.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"hostel.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"hostel.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"hostel.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+    # "cron": {
+    #     "* * * * *": [
+    #         "app.scheduled_tasks..delete_all_barcodes_for_users"
+    #     ]
+    # },
+    # "all": [
+    #     "hostel.tasks.auto_fee_mgmt"
+    # ]
+    "daily": [
+        "hostel.tasks.auto_fee_mgmt"
+    ]
+    # "hourly": [
+    #     "hostel.tasks.hourly"
+    # ],
+    # "weekly": [
+    #     "hostel.tasks.weekly"
+    # ],
+    # "monthly": [
+    #     "hostel.tasks.monthly"
+    # ]
+}
 
 # Testing
 # -------
@@ -152,24 +157,24 @@ app_license = "MIT"
 # --------------------
 
 user_data_fields = [
-	{
-		"doctype": "{doctype_1}",
-		"filter_by": "{filter_by}",
-		"redact_fields": ["{field_1}", "{field_2}"],
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_2}",
-		"filter_by": "{filter_by}",
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_3}",
-		"strict": False,
-	},
-	{
-		"doctype": "{doctype_4}"
-	}
+    {
+        "doctype": "{doctype_1}",
+        "filter_by": "{filter_by}",
+        "redact_fields": ["{field_1}", "{field_2}"],
+        "partial": 1,
+    },
+    {
+        "doctype": "{doctype_2}",
+        "filter_by": "{filter_by}",
+        "partial": 1,
+    },
+    {
+        "doctype": "{doctype_3}",
+        "strict": False,
+    },
+    {
+        "doctype": "{doctype_4}"
+    }
 ]
 
 # Authentication and authorization

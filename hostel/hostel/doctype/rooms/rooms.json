@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{room_number}-{#####}",
+ "creation": "2022-05-09 12:26:35.484752",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_number",
+  "room_bed_capacity",
+  "room_bed_occupied",
+  "bed_availability"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Room Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_bed_capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Bed Capacity",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "room_bed_occupied",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Bed Occupied",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Yes",
+   "fieldname": "bed_availability",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Bed Availability",
+   "options": "Yes\nNo",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-05-18 11:12:45.456090",
+ "modified_by": "Administrator",
+ "module": "Hostel",
+ "name": "Rooms",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

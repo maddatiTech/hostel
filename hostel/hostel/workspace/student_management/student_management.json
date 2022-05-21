@@ -1,0 +1,56 @@
+{
+ "category": "Domains",
+ "charts": [
+  {
+   "chart_name": "Students",
+   "label": "Total Students"
+  }
+ ],
+ "charts_label": "My Test Dashboard",
+ "creation": "2022-05-17 09:23:54.559382",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Student Management",
+ "links": [],
+ "modified": "2022-05-20 14:58:47.448879",
+ "modified_by": "Administrator",
+ "module": "Hostel",
+ "name": "Student Management",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "doc_view": "New",
+   "label": "Create New Student",
+   "link_to": "Students",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "View All Students",
+   "link_to": "Students",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "Report Builder",
+   "label": "View Report",
+   "link_to": "Students",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "Dashboard",
+   "label": "Dashboard",
+   "link_to": "Students",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "My shortcuts"
+}

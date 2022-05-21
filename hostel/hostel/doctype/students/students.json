@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "autoname": "format:{first_name} {last_name} {####}",
+ "creation": "2022-05-09 18:13:28.124639",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "students_details_section",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "column_break_3",
+  "std_address",
+  "std_contact",
+  "std_image",
+  "b_r_section_break",
+  "std_branch_name",
+  "col_break_23",
+  "std_room_number",
+  "avaialbe_rooms_in_this_branch_section",
+  "room_avail_status",
+  "std_room_details",
+  "fees_details_section",
+  "std_month_fee",
+  "column_break_12",
+  "std_admission_fee",
+  "column_break_13",
+  "std_security_deposit",
+  "students_documens_section",
+  "std_ctzn_num",
+  "column_break_9",
+  "std_ctzn_frnt_img",
+  "column_break_11",
+  "std_ctzn_back_img",
+  "guardian_details_section",
+  "std_guard_info",
+  "students_status_section",
+  "std_status",
+  "column_break_29",
+  "std_joined_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "students_details_section",
+   "fieldtype": "Section Break",
+   "label": "Student Details"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "students_documens_section",
+   "fieldtype": "Section Break",
+   "label": "Citizenship Document's"
+  },
+  {
+   "fieldname": "std_image",
+   "fieldtype": "Attach Image",
+   "label": "Student Image"
+  },
+  {
+   "fieldname": "std_ctzn_num",
+   "fieldtype": "Data",
+   "label": "Citizenship Number"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "std_ctzn_frnt_img",
+   "fieldtype": "Attach Image",
+   "label": "Citizenship Front Image"
+  },
+  {
+   "fieldname": "std_ctzn_back_img",
+   "fieldtype": "Attach Image",
+   "label": "Citizenship Back Image"
+  },
+  {
+   "fieldname": "std_address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "std_contact",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "b_r_section_break",
+   "fieldtype": "Section Break",
+   "label": "Branch & Room Details"
+  },
+  {
+   "fieldname": "std_branch_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Branch Name",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fees_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fees Details"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "std_admission_fee",
+   "fieldtype": "Currency",
+   "label": "Admission Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "std_security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guardian_details_section",
+   "fieldtype": "Section Break",
+   "label": "Guardian Details"
+  },
+  {
+   "fieldname": "std_guard_info",
+   "fieldtype": "Table",
+   "label": "Guardian Info",
+   "options": "Guardians"
+  },
+  {
+   "fieldname": "students_status_section",
+   "fieldtype": "Section Break",
+   "label": "Students Status"
+  },
+  {
+   "fieldname": "std_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Studnet Status",
+   "options": "Active\nLeft"
+  },
+  {
+   "default": "0",
+   "fieldname": "std_month_fee",
+   "fieldtype": "Currency",
+   "label": "Monthly Fee",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "std_joined_date",
+   "fieldtype": "Date",
+   "label": "Joined Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.room_avail_status == 1",
+   "fieldname": "std_room_details",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "label": "Available Rooms",
+   "options": "Rooms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "std_room_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Room Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "avaialbe_rooms_in_this_branch_section",
+   "fieldtype": "Section Break",
+   "label": "Avaialbe Rooms"
+  },
+  {
+   "default": "0",
+   "fieldname": "room_avail_status",
+   "fieldtype": "Check",
+   "label": "View"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-20 09:37:48.654899",
+ "modified_by": "Administrator",
+ "module": "Hostel",
+ "name": "Students",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

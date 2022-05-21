@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:expi-id-{####}",
+ "creation": "2022-05-16 21:19:07.510036",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exp_date",
+  "exp_cat",
+  "exp_amt",
+  "exp_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "exp_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exp_cat",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expense Category",
+   "options": "Expense Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exp_amt",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exp_ref",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-16 21:23:32.501231",
+ "modified_by": "Administrator",
+ "module": "Hostel",
+ "name": "Expenses",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

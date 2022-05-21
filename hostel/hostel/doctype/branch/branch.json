@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{branch_name}",
+ "creation": "2022-05-09 12:15:09.313708",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "branch_details_section",
+  "branch_name",
+  "branch_address",
+  "column_break_4",
+  "branch_manager",
+  "branch_contact",
+  "room_details_section",
+  "room_details",
+  "extra_details_section",
+  "extra_info"
+ ],
+ "fields": [
+  {
+   "fieldname": "branch_details_section",
+   "fieldtype": "Section Break",
+   "label": "Branch Details"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_manager",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch Manager",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch_contact",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch Contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_details_section",
+   "fieldtype": "Section Break",
+   "label": "Room Details"
+  },
+  {
+   "fieldname": "room_details",
+   "fieldtype": "Table",
+   "label": "Room Details",
+   "options": "Rooms"
+  },
+  {
+   "fieldname": "extra_details_section",
+   "fieldtype": "Section Break",
+   "label": "Extra Details"
+  },
+  {
+   "fieldname": "extra_info",
+   "fieldtype": "Small Text",
+   "label": "Extra Information"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-09 12:43:15.205808",
+ "modified_by": "Administrator",
+ "module": "Hostel",
+ "name": "Branch",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
