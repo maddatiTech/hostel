@@ -3,9 +3,6 @@
 
 frappe.ui.form.on("Students", {
   onload: function (frm) {
-    frm.set_value('room_avail_status', 0)
-    frm.refresh_field("room_avail_status")
-    frm.refresh_field("std_room_details")
     frm.set_intro(
       "Welcome to " + " " + frm.doc.name + " " + "Document",
       "blue"
